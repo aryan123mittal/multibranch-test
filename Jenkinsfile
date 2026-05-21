@@ -3,15 +3,9 @@ pipeline {
 
     stages {
 
-        stage('Build') {
+        stage('Feature Test') {
             steps {
-                echo "Building DEV application..."
-            }
-        }
-
-        stage('Test') {
-            steps {
-                echo "Running DEV tests..."
+                echo "Testing LOGIN feature..."
             }
         }
     }
