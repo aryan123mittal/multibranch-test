@@ -2,7 +2,7 @@ public class App {
 
     public static void main(String[] args) {
 
-        System.out.println("Production Application Running");
+        System.out.println("Development Application Running");
 
     }
 }
