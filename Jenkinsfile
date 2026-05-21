@@ -5,7 +5,8 @@ pipeline {
 
         stage('Feature Test') {
             steps {
-                echo "Testing LOGIN feature..."
+                sh 'javac app.java'
+                echo "Testing feature branch..."
             }
         }
     }
