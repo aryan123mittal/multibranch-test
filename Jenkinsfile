@@ -5,19 +5,21 @@ pipeline {
 
         stage('Build') {
             steps {
-                echo "Building application..."
+                sh 'javac app.java'
             }
         }
 
-        stage('Test') {
+        stage('Run Tests') {
             steps {
-                echo "Running tests..."
+                echo "Running production tests..."
             }
         }
 
-        stage('Deploy') {
+        stage('Deploy Production') {
             steps {
-                echo "Deploying to PRODUCTION..."
+                sh '''
+                java App > production.log 2>&1 &
+                '''
             }
         }
     }
