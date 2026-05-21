@@ -5,7 +5,7 @@ pipeline {
 
         stage('Build') {
             steps {
-                sh 'javac app.java'
+                sh 'javac App.java'
             }
         }
 
