@@ -3,15 +3,23 @@ pipeline {
 
     stages {
 
-        stage('Build') {
+        stage('Build DEV') {
             steps {
-                echo "Building DEV application..."
+                sh 'javac app.java'
             }
         }
 
-        stage('Test') {
+        stage('Test DEV') {
             steps {
                 echo "Running DEV tests..."
+            }
+        }
+
+        stage('Deploy DEV') {
+            steps {
+                sh '''
+                java App > dev.log 2>&1 &
+                '''
             }
         }
     }
